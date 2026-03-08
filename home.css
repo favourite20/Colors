@@ -1,0 +1,297 @@
+@font-face {
+  font-family: fontone;
+  src: url(./Ubuntu/Ubuntu-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  /* max-width: 100%; */
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding-top: 6rem;
+}
+
+nav {
+  position: fixed;
+  z-index: 700;
+  inset: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  height: 7rem;
+  background: linear-gradient(
+    90deg,
+    #05050a 0%,
+    #05050a 7.692%,
+    #090a0e calc(7.692% + 1px),
+    #090a0e 15.385%,
+    #0d0e12 calc(15.385% + 1px),
+    #0d0e12 23.077%,
+    #121316 calc(23.077% + 1px),
+    #121316 30.769%,
+    #16171a calc(30.769% + 1px),
+    #16171a 38.462%,
+    #1a1b1e calc(38.462% + 1px),
+    #1a1b1e 46.154%,
+    #1e1f22 calc(46.154% + 1px),
+    #1e1f22 53.846%,
+    #222326 calc(53.846% + 1px),
+    #222326 61.538%,
+    #26272a calc(61.538% + 1px),
+    #26272a 69.231%,
+    #292a2d calc(69.231% + 1px),
+    #292a2d 76.923%,
+    #2c2d30 calc(76.923% + 1px),
+    #2c2d30 84.615%,
+    #2e2f33 calc(84.615% + 1px),
+    #2e2f33 92.308%,
+    #303135 calc(92.308% + 1px) 100%
+  );
+}
+
+nav h1 {
+  color: white;
+  font-family: fontone;
+  font-size: 3rem;
+}
+
+nav .generate {
+  height: 4rem;
+  width: 10rem;
+  font-size: 17px;
+  font-family: fontone;
+  border-radius: 2rem;
+  background-color: aquamarine;
+  border: 1px solid #1a1b1e;
+  box-shadow:
+    0 15px 0 #0005,
+    0 10px 0 aquamarine,
+    0 5px 0 10px #fff,
+    0 0 20px 25px rgba(255, 255, 255, 0.171);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+nav .generate:active {
+  box-shadow:
+    0 0px 0 #0005,
+    0 0px 0 aquamarine,
+    0 0px 0 10px #fff,
+    0 0 20px 30px rgba(255, 255, 255, 0.171);
+}
+
+header {
+  padding-top: 3rem;
+  background: #121316;
+  /* height: 60rem; */
+  text-align: center;
+}
+
+header h1 {
+  font-family: fontone;
+  color: white;
+}
+
+header .color-display {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  /* height: 50rem; */
+}
+
+header .color-display div {
+  cursor: pointer;
+    transition: all .8s;
+  border: 2px solid white;
+  height: 20rem;
+  background: red;
+  text-align: center;
+  place-content: center;
+  font-size: 18px;
+  font-family: fontone;
+  cursor: pointer;
+}
+
+header .color-display div:nth-child(2){
+  background: #ffff00;
+
+}
+
+header .color-display div:nth-child(3){
+  background: #008000;
+
+}
+
+header .color-display div:nth-child(4){
+  background: #ffa500;
+
+}
+
+header .color-display div:nth-child(5){
+  background: #0000ff;
+
+}
+
+header .color-display div:nth-child(6){
+  background: #800080;
+
+}
+
+header .color-display div:hover{
+    transform: translateY(-1rem);
+}
+
+@media screen and (max-width:950px){
+  header .color-display div{
+    width: 700px;
+    margin-bottom: 1.5rem;
+
+    
+  }
+
+  header .color-display{
+    display: block;
+    justify-items: center;
+   
+  }
+}
+
+@media screen and (max-width : 800px){
+  ::-webkit-scrollbar{
+      display: none;
+    }
+  *{
+    max-width: 100%;
+    overflow-x: hidden;
+    
+  }
+
+  nav{
+    padding: 20px;
+    /* font-size: 15px; */
+  }
+
+  nav h1{
+    font-size: 35px;
+  }
+
+  nav .generate{
+    width: 12rem;
+    height: 4rem;
+  }
+
+  header h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  header .color-display{
+    gap: unset;
+    overflow-x: unset;
+    display: block;
+  }
+
+  header .color-display div{
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+@media screen and (max-width : 500px){
+  *{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  nav{
+    padding: 20px;
+    /* font-size: 15px; */
+  }
+
+  nav h1{
+    font-size: 35px;
+  }
+
+  nav .generate{
+    width: 7rem;
+    height: 3rem;
+  }
+
+  header h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  header .color-display{
+    gap: unset;
+    overflow-x: unset;
+    display: block;
+  }
+
+  header .color-display div{
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* @media screen and (min-width: 300px) and (max-width:600px){
+  header .color-display div{
+    width: 450px;
+    
+  }
+
+  header .color-display{
+    justify-items: center;
+   
+  }
+} */
+
+
+@media screen and (max-width : 400px){
+  *{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  nav{
+    padding: 20px;
+    /* font-size: 15px; */
+  }
+
+  nav h1{
+    font-size: 35px;
+  }
+
+  nav .generate{
+    width: 7rem;
+    height: 3rem;
+  }
+
+  header h1{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  header .color-display{
+    gap: unset;
+    overflow-x: unset;
+    display: block;
+  }
+
+  header .color-display div{
+    margin-bottom: 1.5rem;
+  }
+}
